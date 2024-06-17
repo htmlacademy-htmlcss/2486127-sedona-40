@@ -45,8 +45,9 @@
       </nav>
     </header>
 
-    <div class="select-hotels">
-      <main class="main-inner">
+
+      <main class="main-container main-inner">
+        <div class="select-hotels">
         <header class="inner-header">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ol class="breadcrumbs">
@@ -65,6 +66,7 @@
           <h2 class="visualli-hidden">Подбор отелей в Седоне с фильтрами</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
 
+            <div class="filter-group">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
@@ -111,18 +113,18 @@
 
             <button class="button-filter" type="submit">Применить</button>
             <button class="button-clear" type="reset">Сбросить</button>
-
+          </div>
           </form>
         </section>
-
-    </div>
+      </div>
 
     <section class="hotel-cards">
+      <div class="sorting-container">
       <h2 class="catalog-hotels-cards">Найдено гостиниц: <span>38</span></h2>
       <select class="select-control" arial-label="Сортировка">
-        <options value="cheap">Сначала дешевые</options>
-        <options value="popular">Сначала популярные</options>
-        <options value="expensive">Сначала дорогие</options>
+        <option value="cheap">Сначала дешевые</options>
+        <option value="popular">Сначала популярные</options>
+        <option value="expensive">Сначала дорогие</options>
       </select>
 
       <ul class="view-buttons">
@@ -142,6 +144,7 @@
           </a>
         </li>
       </ul>
+    </div>
 
       <!-- Еще можно так написать, кнопки переключения, верно? В чем различие?
         <a href="#" class="button button-light">
@@ -245,10 +248,14 @@
         </button>
       </form>
     </section>
+
     </main>
 
 
+
+
     <footer class="main-footer">
+      <div class="page-footer-container">
       <section class="footer-sotial-media">
         <h3 class="visually-hidden">Мы в социальных сетях</h3>
         <ul class="social-media" title="Ссылки на социальные сети">
@@ -274,10 +281,11 @@
         <h3 class="visually-hidden">Контакты</h3>
         <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="logo-link-academy" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img class="foter-logo-academy" src="images/logo-html-academy.png" width="114.9" height="32.9"
+          <img class="foter-logo-academy" src="images/logo-html-academy.png" width="115" height="32.9"
             alt="Логотип HTML Academy">
         </a>
       </section>
+      </div>
     </footer>
 
   </body>
