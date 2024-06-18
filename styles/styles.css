@@ -37,26 +37,21 @@ body {
 }
 
 .navigation {
-	display: flex;
-	margin: auto 70px;
-}
-
-.navigation-logo {
-	width: 140px;
-	margin-right: 28px;
+	display: grid;
+	margin: 0 70px;
+	grid-template-columns: 140px 1fr  270px;
+  column-gap: 30px;
 }
 
 .navigation-list{
-	width: 530px;
+	display: flex;
+  align-items: center;
 	margin: 0;
 	padding: 0;
 }
 
 .navigation-user {
-	max-width: 280px;
 	margin-left: auto;
-	padding: 0;
-	justify-content: flex-end;
 }
 
 .navigation-link {
@@ -66,10 +61,15 @@ body {
 	text-decoration: none;
 	color: #000000;
 	text-align: center;
-
+	padding: 20px 16px;
 }
 
-.button-search {
+.button-want-here {
+	font-family: "PT Sans", sans-serif;
+	width: 160px;
+	border-radius: 4px;
+	padding: 8px 50px;
+	margin-left: 20px;
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 700;
@@ -83,7 +83,7 @@ body {
 .first-screen {
 	background-image: url("../images/index-background.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% auto;
+	background-size: cover;
 	background-color: #7db54f;
 	color: #ffffff;
 	font-size: 30px;
@@ -110,19 +110,16 @@ body {
 
 .advantages-list {
 	display: flex;
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
 	flex-wrap: wrap;
 }
 
-/*
+
 .adnantages-item {
-	margin: 0 auto;
-	padding: 0;
 	width: 400px;
 	height: 385px;
 }
-	*/
 
 .advantages-title {
 	text-transform: uppercase;
@@ -159,10 +156,15 @@ body {
 }
 
 .services-list {
-	text-align: center;
-	margin: 0 auto;
-	padding: 0;
 	display: flex;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.services-item {
+	width: 400px;
+	padding: 81px 85px;
 }
 
 .services-title {
@@ -312,16 +314,24 @@ body {
 
 .product-list {
 	display: flex;
-	width: 1200px;
+	width: 1060px;
 	margin: 0;
 	padding: 0;
 	flex-wrap: wrap;
-	margin: 0 70px;
 }
 
 .product-card {
-	width: 340px;
+	width: 300px;
+	padding: 20px;
+	border: 1px solid;
+	border-radius: 4px;
+	border-color: #e6e6e6;
 	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.product-card:nth-child(3n) {
+	margin-right: 0;
 }
 
 .catalog-hotels-cards {
