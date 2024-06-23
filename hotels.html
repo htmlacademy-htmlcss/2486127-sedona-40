@@ -39,7 +39,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button-search" href="#">ХОЧУ СЮДА!</a>
+            <a class="button-want-here" href="#">ХОЧУ СЮДА!</a>
           </li>
         </ul>
       </nav>
@@ -120,7 +120,7 @@
 
     <section class="hotel-cards">
       <div class="sorting-container">
-      <h2 class="catalog-hotels-cards">Найдено гостиниц: <span>38</span></h2>
+      <h2 class="catalog-hotels-title">Найдено гостиниц: <span>38</span></h2>
       <select class="select-control" arial-label="Сортировка">
         <option value="cheap">Сначала дешевые</options>
         <option value="popular">Сначала популярные</options>
@@ -131,20 +131,24 @@
         <li class="view-button-item">
           <a class="view-button-title" href="catalog.html?view=card">
             <span class="visually-hidden">Показать карточками</span>
+            <span class="item-card"></span>
           </a>
         </li>
         <li class="view-button-item">
           <a class="view-button-title" href="catalog.html?view=tile">
             <span class="visually-hidden">Показать плиткой</span>
+            <span class="item-tile"></span>
           </a>
         </li>
         <li class="view-button-item">
           <a class="view-button-title" href="catalog.html?view=list">
             <span class="visually-hidden">Показать списком</span>
+            <span class="item-lisy"></span>
           </a>
         </li>
       </ul>
     </div>
+    </section>
 
       <!-- Еще можно так написать, кнопки переключения, верно? В чем различие?
         <a href="#" class="button button-light">
@@ -215,7 +219,7 @@
 
 
       <ul class="pagination">
-        <li class="pagination-item">
+        <li class="pagination-item pagination-current">
           <a class="pagination-link pagination-current">1</a>
         </li>
         <li class="pagination-item">
@@ -227,7 +231,7 @@
         <li class="pagination-item">
           <a class="pagination-link" href="#">4</a>
         </li>
-        <li class="pagination-item">
+        <li class="pagination-item pagination-choose">
           <a class="pagination-choose-page" href="#">...</a>
         </li>
         <li class="pagination-item">
@@ -241,7 +245,7 @@
       <p class="text-about">Подпишитесь на рассылку</p>
       <p class="text-reasons">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-        <input class="field" type="email" name="newsletter-email" id="newsletter-email" placeholder="Ваш e-mail"
+        <input class="mail-field-white" type="email" name="newsletter-email" id="newsletter-email" placeholder="Ваш e-mail"
           required>
         <button class="newsletter-button" type="submit">
           <span>Подписаться</span>
