@@ -67,6 +67,19 @@ body {
   column-gap: 30px;
 }
 
+.header-logo {
+	display:block;
+	margin-bottom: -6px;
+}
+
+.navigation-logo:hover {
+	opacity: 0.7;
+}
+
+.navigation-logo:active {
+	opacity: 0.3;
+}
+
 .navigation-list{
 	display: flex;
   align-items: center;
@@ -85,6 +98,7 @@ body {
 	color: #000000;
 	text-align: center;
 	padding: 20px 16px;
+	display: block;
 }
 
 
@@ -191,6 +205,11 @@ body {
 	margin: 51px 371px 82px 371px;
 } */
 
+.image-welcome,
+.advantage-img {
+	display: block;
+}
+
 .text-about {
 	font-size: 30px;
 	line-height: 36px;
@@ -259,16 +278,18 @@ body {
 	margin: auto;
 }
 
+
 .advantages-title::after {
-position: absolute;
-right: 85px;
-top: 86px;
-left: 85px;
-width: 60px;
-height: 2px;
-background-color: rgba(0, 0, 0, 0.3);
-content: "";
-}
+	position: absolute;
+	left: 50%;
+	width: 60px;
+	height: 2px;
+	background-color: rgba(0, 0, 0, 0.3);
+	content: "";
+	transform: translateX(-50%);
+	bottom: 0;
+	}
+
 
 .title-white::after {
 	background-color: rgba(255, 255, 255, 0.3);
@@ -437,17 +458,14 @@ content: "";
 	display: flex;
 	width: 1060px;
   margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.footer-sotial-media {
-	width: 150px;
-	margin-right: 40px;
-}
 
 .social-media {
 	display: flex;
 	list-style: none;
-	margin: 0;
 	padding: 0px 10px;
 }
 
@@ -456,20 +474,17 @@ content: "";
 	background-repeat: no-repeat;
 	background-position: center;
 	padding: 20px;
+	display: block;
 }
 
-/* как покрасить картинки или svg - этот не сработал
-.social-link svg:hover {
-	background-color: #68a2ca;
-}
-
-.footer-contacts:hover {
-	color: #756157;
+/* способ не сработал, почему????
+.a svg:hover path {
+	fill: #756157;
 } */
+
 
 .footer-phone {
 	width: 332px;
-	margin: 0 195px;
 	font-size: 40px;
 	line-height: 40px;
 	font-weight: 400;
@@ -492,10 +507,9 @@ a[href^="tel:"]:hover {
 	margin-left: auto;
 }
 
-.logo-link-academy:hover {
-	color: #756157;
+.logo-link-academy:hover path{
+	fill: #756157;
 }
-
 
 
 .select-hotels {
@@ -524,6 +538,18 @@ a[href^="tel:"]:hover {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	position: relative;
+}
+
+.breadcrumbs-item + .breadcrumbs-item::before {
+	content:"";
+	position: absolute;
+	background-image: url( ../images/arrow-right.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 7px;
+	height: 10px;
+	transform: translate(-17px, 5px);
 }
 
 .breadcrumbs-link {
@@ -533,6 +559,15 @@ a[href^="tel:"]:hover {
 	text-decoration: none;
 	color: #ffffff;
 	margin-right: 28px;
+	position: relative;
+}
+
+.breadcrumbs-link:hover {
+	opacity: 60%;
+}
+
+.breadcrumbs-link:active {
+	opacity: 30%;
 }
 
 
@@ -621,6 +656,7 @@ a[href^="tel:"]:hover {
 	padding-inline-start: 0px;
 }
 
+
 .view-button-title {
 	display: flex;
 	justify-content: center;
@@ -629,10 +665,24 @@ a[href^="tel:"]:hover {
 	width: 48px;
 	height: 48px;
 	align-items: center;
+	outline: none; /*убирает браузерное выделение табом*/ 
 }
 
+.view-button-current {
+	border: 2px solid #000000;
+}
+
+.view-button-title:hover {
+	border: 2px solid #000000;
+}
+
+.view-button-title:focus {
+	border: 2px solid #68a2ca;
+}
+
+
 .catalog-hotels {
-	width: 1200px;
+	width: 1060px;
 	display: flex;
 }
 
@@ -680,7 +730,10 @@ a[href^="tel:"]:hover {
 	width: 1060px;
 	margin: 40px 70px;
 	padding: 0;
+	border-bottom: 1px solid #e6e6e6;
+	padding-bottom: 40px;
 }
+
 
 
 .product-card {
@@ -709,6 +762,7 @@ a[href^="tel:"]:hover {
 	margin: 0;
 	padding: 0;
 	grid-column: 1/3;
+	display: block;
 }
 
 .product-card-title {
@@ -765,40 +819,31 @@ a[href^="tel:"]:hover {
 
 .product-card-stars {
 	margin: 0;
-}
-
-/* этот способ почему-то не сработал
-.product-card-stars {
-	margin: 0;
 	width: 100%;
 	height: 17px;
-	background-image: url("../images/icon/icon-star.png");
+	background-image: url("../images/icon/icon-star.svg");
 	background-repeat: space;
 }
 
-.product-stars-6 {
-	width: 140px;
-}
-
 .product-stars-5 {
-	width: 116px;
+	width: 106px;
 }
 
 .product-stars-4 {
-	width: 92px;
+	width: 84px;
 }
 
 .product-stars-3 {
-	width: 68px;
+	width: 62px;
 }
 
 .product-stars-2 {
-	width: 44px;
+	width: 48px;
 }
 
 .product-stars-1 {
-	width: 20px;
-} */
+	width: 18px;
+}
 
 
 .product-card-rating {
@@ -819,7 +864,7 @@ a[href^="tel:"]:hover {
 .pagination {
 	display: flex;
 	padding: 0;
-	margin: 0 70px;
+	margin: 0 70px 40px;
 }
 
 .pagination-item {
