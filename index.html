@@ -223,14 +223,14 @@
           <input class="" id="search" name="search" type="search" placeholder="Поиск"> -->
 
           <label class="modal-label" for="arrival-date">
-            <span class="text-label">Дата заезда:</span>
+            <span class="text-label">Дата Заезда:</span>
           </label>
           <input class="modal-input" id="arrival-date" name="arrival-date" type="text" placeholder="27 апреля 2020">
-          <p class="modal-description">Мы не можем отправить вас в прошлое.</p> 
+          <p class="modal-description modal-description-color">Мы не можем отправить вас в прошлое.</p> 
           <!-- - сделать p псевдоэлементом??? -->
 
           <label class="modal-label" for="departure-date">
-            <span class="text-label">Дата выезда:</span>
+            <span class="text-label">Дата Выезда:</span>
           </label>
           <input class="modal-input" id="departure-date" name="departure-date" type="text" placeholder="1 сентября 2023">
           <p class="modal-description">На эти даты есть свободные номера. Пока есть.</p>
@@ -239,6 +239,7 @@
           <label class="modal-label" for="amount-adults">
             <span class="text-label">Взрослые:</span>
           </label>
+          <div class="number-form">
           <button class="number-control-button" type="button">
             <span>-</span>
           </button>
@@ -246,11 +247,13 @@
           <button class="number-control-button" type="button">
             <span>+</span>
           </button>
+          </div>
 
           <label class="modal-label" for="amount-children">
             <span class="text-label">Дети:</span>
             <span class="visually-hidden">Посмотреть дополнительную информацию</span>
           </label>
+          <div class="number-form">
           <button class="number-control-button" type="button">
             <span>-</span>
           </button>
@@ -258,12 +261,13 @@
           <button class="number-control-button" type="button">
             <span>+</span>
           </button>
+          </div>
+
+          <button class="modal-search-button blue-button" type="submit">
+            <span>Найти</span>
+          </button>
 
         </form>
-
-        <button class="modal-search-button blue-button" type="button">
-          <span>Найти</span>
-        </button>
         
       </section>
       <button class="modal-button-close">

@@ -550,6 +550,62 @@ a[href^="tel:"]:hover {
   max-width: 500px;
 }
 
+.modal-form {
+	display: grid;
+	width: 580px;
+	grid-template-columns: repeat(2, 139px 151px);
+	grid-template-rows: repeat(3, auto 48px) 60px;
+	align-items: center;
+}
+
+.modal-label {
+	font-family: "PT Sans", sans-serif;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 700;
+}
+
+.modal-description {
+	font-family: "PT Sans", sans-serif;
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 400;
+}
+
+.modal-description-color {
+	color: #ff5757;
+}
+
+.modal-input,
+.modal-description {
+	grid-column: 2/-1;
+}
+
+.modal-input {
+	display: grid;
+	width: 100%;
+}
+
+.number-form {
+	display: flex;
+}
+
+.modal-search-button {
+	grid-column: 1/-1;
+	grid-row: 7/8;
+	background-color: #83b3d3;
+	border-radius: 10px;
+	border: none;
+	width: 580px;
+	height: 60px;
+	font-family: "PT Sans", sans-serif;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	cursor: pointer;
+}
 
 .modal-button-close {
   position: absolute;
@@ -567,6 +623,7 @@ a[href^="tel:"]:hover {
   cursor: pointer;
 }
 
+/* скрывает модальное окно на главной странице */
 /* .modal-container-close {
   display: none;
 } */
