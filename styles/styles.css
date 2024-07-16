@@ -536,7 +536,7 @@ a[href^="tel:"]:hover {
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   width: 720px;
-  height: 580px;
+  min-height: 580px;
 }
 
 .modal-title {
@@ -570,6 +570,8 @@ a[href^="tel:"]:hover {
 	font-size: 16px;
 	line-height: 21px;
 	font-weight: 400;
+  padding: 0 20px;
+  margin: 0;
 }
 
 .modal-description-color {
@@ -582,13 +584,93 @@ a[href^="tel:"]:hover {
 }
 
 .modal-input {
-	display: grid;
-	width: 100%;
+  height: 48px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  padding: 0 20px;
 }
+
+.modal-date {
+  background-image: url("../images/modal-date.svg");
+  background-repeat: no-repeat;
+  opacity: 30%;
+  background-position: 95% 50%;
+}
+
+.modal-input-number {
+  max-width: 48px;
+  padding: 0;
+  text-align: center;
+  border-radius: 0;
+}
+
 
 .number-form {
 	display: flex;
+  width: 110px;
 }
+
+.number-control-button {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: block;
+}
+
+.number-minus,
+.number-plus {
+width: 40px;
+cursor: pointer;
+border: none;
+}
+
+.number-minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.number-minus:before {
+  content: "";
+  position: absolute;
+  background-color: rgba(117, 97, 87, 0.3);
+  top: 35%;
+  left: 70%;
+  width: 2px;
+  height: 14px;
+  rotate: 90deg;
+}
+
+.number-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.number-plus:before {
+  content: "";
+  position: absolute;
+  background-color: rgba(117, 97, 87, 0.3);
+  top: 35%;
+  right: 70%;
+  width: 2px;
+  height: 14px;
+  rotate: 90deg;
+}
+
+.number-plus:after {
+  content: "";
+  position: absolute;
+  background-color: rgba(117, 97, 87, 0.3);
+  top: 35%;
+  right: 70%;
+  width: 2px;
+  height: 14px;
+  rotate: 180deg;
+}
+
 
 .modal-search-button {
 	grid-column: 1/-1;

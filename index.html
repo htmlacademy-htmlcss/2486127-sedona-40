@@ -225,27 +225,25 @@
           <label class="modal-label" for="arrival-date">
             <span class="text-label">Дата Заезда:</span>
           </label>
-          <input class="modal-input" id="arrival-date" name="arrival-date" type="text" placeholder="27 апреля 2020">
+          <input class="modal-input modal-date" id="arrival-date" name="arrival-date" type="text" placeholder="27 апреля 2020">
           <p class="modal-description modal-description-color">Мы не можем отправить вас в прошлое.</p> 
-          <!-- - сделать p псевдоэлементом??? -->
 
           <label class="modal-label" for="departure-date">
             <span class="text-label">Дата Выезда:</span>
           </label>
-          <input class="modal-input" id="departure-date" name="departure-date" type="text" placeholder="1 сентября 2023">
+          <input class="modal-input modal-date" id="departure-date" name="departure-date" type="text" placeholder="1 сентября 2023">
           <p class="modal-description">На эти даты есть свободные номера. Пока есть.</p>
-          <!-- - сделать p псевдоэлементом??? -->
 
           <label class="modal-label" for="amount-adults">
             <span class="text-label">Взрослые:</span>
           </label>
           <div class="number-form">
-          <button class="number-control-button" type="button">
-            <span>-</span>
+          <button class="number-control-button number-minus" type="button">
+            <span class="visually-hidden">Уменьшить количество взрослых</span>
           </button>
-          <input class="modal-input" id="amount-adults" name="amount-adults" type="text" placeholder="2">
-          <button class="number-control-button" type="button">
-            <span>+</span>
+          <input class="modal-input modal-input-number" id="amount-adults" name="amount-adults" type="text" placeholder="2">
+          <button class="number-control-button number-plus" type="button">
+            <span class="visually-hidden">Увеличить количество взрослых</span>
           </button>
           </div>
 
@@ -254,12 +252,12 @@
             <span class="visually-hidden">Посмотреть дополнительную информацию</span>
           </label>
           <div class="number-form">
-          <button class="number-control-button" type="button">
-            <span>-</span>
+          <button class="number-control-button number-minus" type="button">
+            <span class="visually-hidden">Уменьшить количество детей</span>
           </button>
-          <input class="modal-input" id="amount-children" name="amount-children" type="text" placeholder="2">
-          <button class="number-control-button" type="button">
-            <span>+</span>
+          <input class="modal-input modal-input-number" id="amount-children" name="amount-children" type="text" placeholder="2">
+          <button class="number-control-button number-plus" type="button">
+            <span class="visually-hidden">Увеличить количество детей</span>
           </button>
           </div>
 
