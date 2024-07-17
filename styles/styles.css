@@ -572,6 +572,8 @@ a[href^="tel:"]:hover {
 	font-weight: 400;
   padding: 0 20px;
   margin: 0;
+	align-self: start;
+	margin-top: 4px;
 }
 
 .modal-description-color {
@@ -614,6 +616,10 @@ a[href^="tel:"]:hover {
 .number-form {
 	display: flex;
   width: 110px;
+}
+
+.number-form-child {
+	justify-self: end;
 }
 
 .number-control-button {
