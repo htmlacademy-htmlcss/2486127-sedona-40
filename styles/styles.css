@@ -678,6 +678,58 @@ border: none;
 }
 
 
+.tooltip {
+    position: absolute;
+    margin-left: 10px;
+    width: 26px;
+    height: 26px;
+}
+
+.modal-tooltip {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  background-color: rgba(51, 51, 51, 1);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 15px 18px;
+  border-radius: 10px;
+  display: block;
+  width: 256px;
+  box-shadow: 0 15px 30px 0 #333333;
+  position: absolute;
+  top: 40px;
+  left: -115px;
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-text:before{
+  content: "";
+  background-image: url("../images/icon/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  top: -8%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-tooltip:hover + .tooltip-text,
+.modal-tooltip:focus + .tooltip-text {
+  display: block;
+}
+
 .modal-search-button {
 	grid-column: 1/-1;
 	grid-row: 7/8;
