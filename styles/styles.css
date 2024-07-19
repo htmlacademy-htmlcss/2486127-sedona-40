@@ -154,7 +154,7 @@ body {
 	font-family: "PT Sans", sans-serif;
 	width: 160px;
 	border-radius: 4px;
-	padding: 8px 50px;
+	padding: 8px 30px;
 	margin-left: 20px;
 	font-size: 16px;
 	line-height: 20px;
@@ -164,6 +164,7 @@ body {
 	color: #ffffff;
 	background-color: #756157;
 	text-decoration: none;
+	display: block;
 }
 
 .brown-button:hover,
@@ -188,7 +189,7 @@ body {
 
 .first-screen {
 	background-image: url("../images/divider.png"), url("../images/index-background.jpg");
-	background-position: center bottom, center; /*задаем по оси х и у*/
+	background-position: bottom; /*задаем по оси х и у*/
 	background-size: 100% auto, cover; /*задаем по оси х и у через запятую для каждой картинки*/
 	background-repeat: no-repeat, no-repeat;
 	background-color: #7db54f;
@@ -218,7 +219,7 @@ body {
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
-	margin-bottom: 20px;
+	margin-bottom: 22px;
 }
 
 .text-reasons {
@@ -258,9 +259,9 @@ body {
 .advantages-item-text {
 	display: flex;
 	flex-direction: column;
-	width: 230px;
-	margin: 102px 85px;
+	justify-content: center;
 	position: relative;
+	padding: 102px 85px;
 }
 
 
@@ -269,16 +270,15 @@ body {
 }
 
 .advantages-title {
-	width: 175px;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 28px;
-	margin: auto;
+	margin: 0;
 	position: relative;
+	margin-bottom: 62px;
 }
-
 
 .advantages-title::after {
 	position: absolute;
@@ -292,7 +292,6 @@ body {
 	}
 
 
-
 .title-white::after {
 	background-color: rgba(255, 255, 255, 0.3);
 }
@@ -300,7 +299,7 @@ body {
 .advantages-description {
 	text-align: center;
 	color: #333333;
-	margin-top: 62px;
+	margin: 0;
 }
 
 .descripton-white {
@@ -359,12 +358,12 @@ body {
 	}
 
 .button-search {
-	width: 380px;
+	width: 376px;
 	height: 52px;
 	background-color: #756157;
 	border: 2px solid #756157;
 	border-radius: 4px;
-	padding: 8px 50px;
+	padding: 8px 20px;
 	margin-top: 54px;
 	font-family: "PT Sans", sans-serif;
 	font-size: 20px;
@@ -396,7 +395,7 @@ body {
 
 
 .mail-field {
-	width: 450px;
+	width: 452px;
 	height: 52px;
 	background-color: #ffffff;
 	border-radius: 4px 0px 0px 4px;
@@ -412,7 +411,7 @@ body {
 }
 
 .mail-field-white {
-	width: 450px;
+	width: 452px;
 	height: 52px;
 	background-color: #f2f2f2;
 	border-radius: 4px 0px 0px 4px;
@@ -428,7 +427,7 @@ body {
 }
 
 .newsletter-button {
-	width: 230px;
+	width: 232px;
 	height: 52px;
 	background-color: #82b3d3;
 	border-radius: 0px 4px 4px 0px;
@@ -475,8 +474,12 @@ body {
 .social-link {
 	background-repeat: no-repeat;
 	background-position: center;
-	padding: 20px;
+	padding: 13px;
 	display: block;
+}
+
+.social-link:active {
+	opacity: 30%;
 }
 
 /* способ не сработал, почему????
@@ -494,7 +497,7 @@ body {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #000000;
-  margin-right: 210px;
+  margin-right: 232px;
 }
 
 
@@ -505,6 +508,11 @@ a[href^="tel:"]:hover {
   color: #756157;
 }
 
+/* не сработала покраска!
+.a[href^="tel:"]:active {
+	opacity: 30%;
+	color: rgba(117, 97, 87, 0.3);
+} */
 
 .logo-link-academy {
 	margin-left: auto;
@@ -512,6 +520,10 @@ a[href^="tel:"]:hover {
 
 .logo-link-academy:hover path{
 	fill: #756157;
+}
+
+.logo-link-academy:active path{
+	fill: rgba(117, 97, 87, 0.3);
 }
 
 
@@ -598,6 +610,10 @@ a[href^="tel:"]:hover {
   padding: 0 20px;
 }
 
+.modal-input::placeholder {
+  color: #000000;
+}
+
 .modal-date {
   background-image: url("../images/modal-date.svg");
   background-repeat: no-repeat;
@@ -611,7 +627,6 @@ a[href^="tel:"]:hover {
   text-align: center;
   border-radius: 0;
 }
-
 
 .number-form {
 	display: flex;
@@ -640,7 +655,7 @@ border: none;
   border-radius: 4px 0 0 4px;
 }
 
-.number-minus:before {
+.number-minus::before {
   content: "";
   position: absolute;
   background-color: rgba(117, 97, 87, 0.3);
@@ -655,7 +670,7 @@ border: none;
   border-radius: 0 4px 4px 0;
 }
 
-.number-plus:before {
+.number-plus::before {
   content: "";
   position: absolute;
   background-color: rgba(117, 97, 87, 0.3);
@@ -666,7 +681,7 @@ border: none;
   rotate: 90deg;
 }
 
-.number-plus:after {
+.number-plus::after {
   content: "";
   position: absolute;
   background-color: rgba(117, 97, 87, 0.3);
@@ -675,6 +690,18 @@ border: none;
   width: 2px;
   height: 14px;
   rotate: 180deg;
+}
+
+.number-minus:hover::before,
+.number-plus:hover::before,
+.number-plus:hover::after {
+	background-color: #000000;
+}
+
+.number-minus:active::before,
+.number-plus:active::before,
+.number-plus:active::after {
+  background-color: rgba(117, 97, 87, 0.3);
 }
 
 
@@ -691,6 +718,8 @@ border: none;
   margin: 0;
   padding: 0;
   cursor: pointer;
+	width: 26px;
+	height: 26px;
 }
 
 .tooltip-text {
@@ -712,7 +741,7 @@ border: none;
   display: none;
 }
 
-.tooltip-text:before{
+.tooltip-text::before{
   content: "";
   background-image: url("../images/icon/tooltip-arrow.svg");
   width: 19px;
@@ -754,19 +783,42 @@ border: none;
   right: 52px;
   width: 52px;
   height: 52px;
-  background-color: rgba(242, 242, 242, 1);
+  background-color: #f2f2f2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
+}
+
+.modal-button-close::before {
+	content: "";
+  position: absolute;
+  background-color: #000000;
+  top:50%;
+	left: 50%;
+  width: 2px;
+  height: 14px;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-button-close::after {
+	content: "";
+  position: absolute;
+  background-color: #000000;
+  top:50%;
+	left: 50%;
+  width: 2px;
+  height: 14px;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal-button-close:active::before,
+.modal-button-close:active::after {
+	background-color: rgba(117, 97, 87, 0.3);
 }
 
 /* скрывает модальное окно на главной странице */
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .select-hotels {
 	background-image: url("../images/background-hotels-filter.jpg");
@@ -1109,8 +1161,8 @@ border: none;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	width: 1060px;
-	margin: 50px 70px 40px;
+	width: 1200px;
+	padding: 50px 70px 40px;
 }
 
 
@@ -1121,6 +1173,7 @@ border: none;
 	font-weight: 700;
 	text-transform: uppercase;
 	max-width: 485px;
+	margin: 0;
 }
 
 .find-hotels {
@@ -1158,6 +1211,7 @@ border: none;
 	list-style: none;
 	align-items: center;
 	padding-inline-start: 0px;
+	margin: 0;
 }
 
 
