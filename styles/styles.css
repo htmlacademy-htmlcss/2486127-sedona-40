@@ -105,7 +105,7 @@ body {
 .navigation-link-current::before {
 	position: absolute;
 	right: 16px;
-	bottom: 0px;
+	bottom: -1px;
 	left: 16px;
 	height: 2px;
 	background-color: #756257;
@@ -217,9 +217,28 @@ body {
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
-	margin: 0;
+	margin: 0 0 25px;
 	padding: 0;
-	margin-bottom: 22px;
+}
+
+.text-about-1 {
+	margin-bottom: 24px;
+}
+
+.text-about-2 {
+	margin-bottom: 20px;
+}
+
+.text-about-3 {
+	margin-bottom: 20px;
+}
+
+.text-about-4 {
+	margin-bottom: 20px;
+}
+
+.text-about-news {
+	margin-bottom: 20px;
 }
 
 .text-reasons {
@@ -261,7 +280,8 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
-	padding: 102px 85px;
+	padding: 70px 85px;
+	height: 100%;
 }
 
 
@@ -344,11 +364,20 @@ body {
 	padding: 81px 85px;
 }
 
+.services-pic{
+	height: 76px;
+	object-fit: contain;
+	margin-bottom: 24px;
+}
+
 .services-title {
+	margin: 0;
 	text-transform: uppercase;
+	margin-bottom: 35px;
 }
 
 .services-description {
+	margin: 0;
 	color: #333333;
 }
 
@@ -363,7 +392,7 @@ body {
 	background-color: #756157;
 	border: 2px solid #756157;
 	border-radius: 4px;
-	padding: 8px 20px;
+	padding: 6px 20px;
 	margin-top: 54px;
 	font-family: "PT Sans", sans-serif;
 	font-size: 20px;
@@ -376,7 +405,7 @@ body {
 
 .newsletter {
 	text-align: center;
-	padding: 96px 258px 104px;
+	padding: 116px 258px 104px;
 }
 
 .newsletter-index {
@@ -386,6 +415,7 @@ body {
 	background-color: #7db54f;
 	text-align: center;
 	color: #ffffff;
+	padding: 97px 258px 104px;
 }
 
 .newsletter-form {
@@ -452,7 +482,7 @@ body {
 
 
 .main-footer {
-	padding: 40px 70px 30px;
+	padding: 25px 70px 30px;
 }
 
 .page-footer-container {
@@ -478,15 +508,13 @@ body {
 	display: block;
 }
 
-.social-link:active {
-	opacity: 30%;
+.social-link:hover path {
+	fill: #68a2cA;
 }
 
-/* способ не сработал, почему????
-.a svg:hover path {
-	fill: #756157;
-} */
-
+.social-link:active {
+	opacity: 30%;
+} 	 	
 
 .footer-phone {
 	width: 330px;
@@ -500,19 +528,27 @@ body {
   margin-right: 232px;
 }
 
+.footer-phone:hover,
+.navigation-link:hover,
+.navigation-link:hover svg path  {
+  color: #756157;
+	fill: #756157;
+}
 
-a[href^="tel:"]:hover {
+.footer-phone:active,
+.navigation-link:active {
+	opacity: 30%;
+	color: rgba(117, 97, 87, 0.3);
+}
+
+/* для всех ссылок телефонов на сайте
+	a[href^="tel:"]:hover {
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
   color: #756157;
-}
-
-/* не сработала покраска!
-.a[href^="tel:"]:active {
-	opacity: 30%;
-	color: rgba(117, 97, 87, 0.3);
 } */
+
 
 .logo-link-academy {
 	margin-left: auto;
@@ -827,7 +863,7 @@ border: none;
 	background-color: #7db54f;
 	color: #ffffff;
 	margin: 0;
-	padding: 35px 70px 70px;
+	padding: 35px 70px 64px 70px;
 }
 
 
@@ -915,7 +951,7 @@ border: none;
 .control {
 	position: relative;
 	display: block;
-	padding-bottom: 16px;
+	padding-bottom: 18px;
 	cursor: pointer;
   }
 
@@ -927,8 +963,13 @@ border: none;
   opacity: 30%;
 }
 
+
+.control:last-child {
+	padding-bottom: 0px;
+}
+
   .control-label {
-	padding-left: 16px;
+	padding-left: 12px;
   }
   
   .control-mark {
@@ -1007,7 +1048,7 @@ border: none;
 	display: flex;
 	justify-content: space-between;
 	width: 288px;
-	margin-bottom: 36px;
+	margin-bottom: 43px;
 }
 
 .range-price {
@@ -1106,7 +1147,7 @@ border: none;
 	display: flex;
 	flex-direction: column;
 	gap: 32px;
-	margin-top: auto;
+	margin-top: 56px;
 }
 
 .button-filter {
@@ -1122,8 +1163,8 @@ border: none;
 	border: none;
 	border-radius: 4px;
 	background-color: #82b3d3;
-	width: 190px;
-	height: 40px;
+	width: 191px;
+	height: 36px;
 	padding: 0;
 }
 
@@ -1282,7 +1323,7 @@ border: none;
 	gap: 20px;
 	list-style: none;
 	width: 1060px;
-	margin: 40px 70px;
+	margin: 0 70px;
 	padding: 0;
 	border-bottom: 1px solid #e6e6e6;
 	padding-bottom: 40px;
@@ -1420,6 +1461,7 @@ border: none;
 	display: flex;
 	padding: 0;
 	margin: 0 70px 40px;
+	padding-top: 37px;
 }
 
 .pagination-item {
