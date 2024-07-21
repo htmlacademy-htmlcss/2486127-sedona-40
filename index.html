@@ -10,7 +10,7 @@
 
   <body>
     <div class="page-container">
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
           <img class="header-logo" alt="Логотип Седона" src="images/logo-sedona.png" width="140" height="70.05 ">
@@ -54,13 +54,13 @@
     </header>
 
 
-    <main class="main-container main-index">
-      <section class="first-screen">
+    <main class="main-container main-index" data-test="main">
+      <section class="first-screen" data-test="hero">
         <h1 class="visually-hidden">Седона - отличный городок для отдыха</h1>
         <img class="image-welcome" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
       </section>
 
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <div class="advantages-wrapper">
         <p class="text-about">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
@@ -104,7 +104,7 @@
         </ul>
       </section>
 
-      <section class="services">
+      <section class="services" data-test="service">
         <div class="services-wrapper">
         <h2 class="visually-hidden">Услуги</h2>
         <p class="text-about text-about-2">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
@@ -129,7 +129,7 @@
         </ul>
       </section>
 
-      <section class="search-hotels">
+      <section class="search-hotels" data-test="search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <p class="text-about text-about-3">Заинтересовались?</p>
         <p class="text-reasons">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в
@@ -137,7 +137,7 @@
         <button class="button-search brown-button" href="#">Поиск гостиницы в Седоне</button>
       </section>
 
-      <section class="newsletter newsletter-index">
+      <section class="newsletter newsletter-index" data-test="subscribe">
         <h2 class="visually-hidden">Подпишитесь на новости</h2>
         <p class="text-about text-about-4">Подпишитесь на рассылку</p>
         <p class="text-reasons letter">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
@@ -154,7 +154,7 @@
     </main>
 
 
-    <footer class="main-footer">
+    <footer class="main-footer" data-test="footer">
       <div class="page-footer-container">
       <section class="footer-sotial-media">
         <h3 class="visually-hidden">Мы в социальных сетях</h3>
