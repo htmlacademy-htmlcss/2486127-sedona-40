@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Дария Кретова](https://up.htmlacademy.ru/htmlcss/40/user/2486127).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaos).
+* Сайт: [Мой проект Седона](https://kretovadar.github.io/2486127-sedona-40/)
 
 ---
 
