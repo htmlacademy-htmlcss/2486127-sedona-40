@@ -14,8 +14,10 @@
 	font-display: swap;
 }
 
-* {
-	box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
@@ -513,7 +515,7 @@ body {
 
 .footer-phone:hover,
 .navigation-link:hover,
-.navigation-link:hover svg path  {
+.navigation-link:hover path  {
   color: #756157;
 	fill: #756157;
 }
