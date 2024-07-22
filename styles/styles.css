@@ -41,7 +41,6 @@ body {
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -52,7 +51,6 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 
 .main-container {
 	flex-grow: 1;
@@ -135,21 +133,6 @@ body {
 	margin-left: auto;
 }
 
-/* способ вставления иконки при помощи фонового изображения (не позволяет менять цвет этой иконки)
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
-	background-image: url("../images/icon/icon-search.svg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 18px 18px;
-}
-
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
-	background-image: url("../images/icon/icon-favorites.svg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 18px 18px;
-} */
-
 .button-want-here {
 	font-family: "PT Sans", sans-serif;
 	width: 160px;
@@ -189,8 +172,8 @@ body {
 
 .first-screen {
 	background-image: url("../images/divider.png"), url("../images/index-background.jpg");
-	background-position: bottom; /*задаем по оси х и у*/
-	background-size: 100% auto, cover; /*задаем по оси х и у через запятую для каждой картинки*/
+	background-position: bottom;
+	background-size: 100% auto, cover;
 	background-repeat: no-repeat, no-repeat;
 	background-color: #7db54f;
 	color: #ffffff;
@@ -200,11 +183,6 @@ body {
 	text-align: center;
 	padding: 50px 370px 82px;
 }
-
-/* более простая версия - отступы для картинки. но если вместо картинки захотят поставить что-то другое, то придется опять прописывать, а так уже минимально готовые чтобы вертска не поломалась
-.image-welcome {
-	margin: 51px 371px 82px 371px;
-} */
 
 .image-welcome,
 .advantage-img {
@@ -268,7 +246,6 @@ body {
 	list-style: none;
 }
 
-
 .adnantages-item {
 	width: 400px;
 	min-height: 385px;
@@ -287,7 +264,6 @@ body {
 	padding: 70px 85px;
 	height: 100%;
 }
-
 
 .advantages-item-img-text {
 	flex-direction: column;
@@ -388,6 +364,9 @@ body {
 .search-hotels {
 	text-align: center;
 	padding: 96px 304px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 	}
 
 .button-search {
@@ -397,7 +376,6 @@ body {
 	border: 2px solid #756157;
 	border-radius: 4px;
 	padding: 6px 20px;
-	margin-top: 54px;
 	font-family: "PT Sans", sans-serif;
 	font-size: 20px;
 	line-height: 36px;
@@ -405,6 +383,8 @@ body {
 	color: #ffffff;
 	text-transform: uppercase;
 	cursor: pointer;
+  margin-top: 54px;
+  text-decoration: none;
 }
 
 .newsletter {
@@ -427,12 +407,11 @@ body {
 	display: flex;
 }
 
-
 .mail-field {
 	width: 452px;
 	height: 52px;
 	background-color: #ffffff;
-	border-radius: 4px 0px 0px 4px;
+	border-radius: 4px 0 0 4px;
 	border-color: #ffffff;
 	margin-top: 54px;
 	font-family: "PT Sans", sans-serif;
@@ -448,7 +427,7 @@ body {
 	width: 452px;
 	height: 52px;
 	background-color: #f2f2f2;
-	border-radius: 4px 0px 0px 4px;
+	border-radius: 4px 0 0 4px;
 	border-color: #f2f2f2;
 	margin-top: 54px;
 	font-family: "PT Sans", sans-serif;
@@ -464,9 +443,8 @@ body {
 	width: 232px;
 	height: 52px;
 	background-color: #82b3d3;
-	border-radius: 0px 4px 4px 0px;
+	border-radius: 0 4px 4px 0;
 	border-color: #82b3d3;
-	padding: 8px 50px;
 	margin-top: 54px;
 	font-family: "PT Sans", sans-serif;
 	font-size: 20px;
@@ -479,31 +457,32 @@ body {
 	cursor: pointer;
 }
 
-
 .letter {
 	color: #ffffff;
 }
 
-
 .main-footer {
 	padding: 25px 70px 30px;
-}
-
-.page-footer-container {
-	display: flex;
+  display: flex;
 	width: 1060px;
   margin: 0 auto;
 	justify-content: space-between;
 	align-items: center;
 }
 
+/* .page-footer-container {
+	display: flex;
+	width: 1060px;
+  margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
+} */
 
 .social-media {
 	display: flex;
 	list-style: none;
-	padding: 0px;
+	padding: 0;
 }
-
 
 .social-link {
 	background-repeat: no-repeat;
@@ -521,7 +500,6 @@ body {
 }
 
 .footer-phone {
-	width: 330px;
 	font-size: 40px;
 	line-height: 40px;
 	font-weight: 400;
@@ -529,7 +507,8 @@ body {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #000000;
-  margin-right: 232px;
+  padding: 0 50px;
+  display: block;
 }
 
 .footer-phone:hover,
@@ -543,19 +522,6 @@ body {
 .navigation-link:active {
 	opacity: 30%;
 	color: rgba(117, 97, 87, 0.3);
-}
-
-/* для всех ссылок телефонов на сайте
-	a[href^="tel:"]:hover {
-  font-size: 40px;
-  line-height: 40px;
-  text-decoration: none;
-  color: #756157;
-} */
-
-
-.logo-link-academy {
-	margin-left: auto;
 }
 
 .logo-link-academy:hover path{
@@ -575,9 +541,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  /* background-color: #f2f2f2;
-  opacity: 80%;
-  можно еще так записать перекрытие цвета на прозрачность*/
 }
 
 .modal {
@@ -775,7 +738,6 @@ border: none;
   text-transform: none;
   padding: 15px 18px;
   border-radius: 10px;
-  display: block;
   width: 256px;
   box-shadow: 0 15px 30px 0 #333333;
   position: absolute;
@@ -859,7 +821,6 @@ border: none;
 	background-color: rgba(117, 97, 87, 0.3);
 }
 
-/* скрывает модальное окно на главной странице */
 .modal-container-close {
   display: none;
 }
@@ -959,7 +920,6 @@ border: none;
 .control {
 	position: relative;
 	display: block;
-	padding-bottom: 18px;
 	cursor: pointer;
   }
 
@@ -971,9 +931,12 @@ border: none;
   opacity: 30%;
 }
 
+.catalog-filter-item {
+  padding-bottom: 16px;
+}
 
-.control:last-child {
-	padding-bottom: 0px;
+.catalog-filter-item:last-child {
+	padding-bottom: 0;
 }
 
   .control-label {
@@ -1006,35 +969,6 @@ border: none;
 	background-position: center;
 	background-repeat: no-repeat;
   }
-
-/* способ добавления галочки - отрисованая галка
-.control-input[type="checkbox"]:checked + .control-mark::before {
-  position: absolute;
-  top: 12px;
-  left: 2px;
-  width: 7px;
-  height: 2px;
-  background-color: #3f5e72;
-  content: "";
-}
-
-.control-input[type="checkbox"]:checked + .control-mark::after {
-	position: absolute;
-	top: 9px;
-	right: 1px;
-	width: 14px;
-	height: 2px;
-	background-color: #3f5e72;
-	content: "";
-  }
-
-.control-input[type="checkbox"]:checked + .control-mark::before {
-	transform: rotate(45deg);
-  }
-
-  .control-input[type="checkbox"]:checked + .control-mark::after {
-	transform: rotate(-45deg);
-  } */
 
 .control-input[type="radio"] + .control-mark {
 	border-radius: 50%;
@@ -1074,7 +1008,6 @@ border: none;
     border: none;
     transition: background-color 0.4s ease;
 }
-
 
 .range-input:hover,
 .range-input:focus-visible {
@@ -1160,7 +1093,6 @@ border: none;
 
 .button-filter {
 	font-family: "PT Sans", sans-serif;
-	background-color: #82b3d3;
 	text-transform: uppercase;
 	font-size: 16px;
 	line-height: 20px;
@@ -1184,11 +1116,10 @@ border: none;
 	font-weight: 700;
 	text-align: center;
 	color: #ffffff;
-	background-color: transparent;
 	cursor: pointer;
 	border: none;
 	border-radius: 4px;
-	background-color: none;
+  background-color: transparent;
 	width: 190px;
 	height: 40px;
 	padding: 0;
@@ -1259,7 +1190,7 @@ border: none;
 	column-gap: 8px;
 	list-style: none;
 	align-items: center;
-	padding-inline-start: 0px;
+	padding-inline-start: 0;
 	margin: 0;
 }
 
@@ -1272,7 +1203,7 @@ border: none;
 	width: 48px;
 	height: 48px;
 	align-items: center;
-	outline: none; /*убирает браузерное выделение табом*/
+	outline: none;
 }
 
 .view-button-current {
@@ -1293,41 +1224,9 @@ border: none;
 	display: flex;
 }
 
-
-
-/* способ сверстать список карточек на флексах
-.product-list {
-	display: flex;
-	flex-wrap: wrap;
-	width: 1060px;
-	margin: 0 70px;
-	padding: 0;
-}
-
-.product-card {
-	width: 340px;
-	min-height: 438px;
-	border: 1px solid;
-	border-radius: 4px;
-	border-color: #e6e6e6;
-	display: flex;
-	flex-wrap: wrap;
-	margin-right: 20px;
-	margin-bottom: 20px;
-	padding: 20px;
-}
-
-.product-card:nth-child(3n) {
-	margin-right: 0;
-} */
-
-
 .product-list {
 	display: grid;
 	grid-template-columns: repeat(3, 340px);
-	/* разные вариации написания кода
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-columns: 340px 340px 340px; */
 	gap: 20px;
 	list-style: none;
 	width: 1060px;
@@ -1418,7 +1317,6 @@ border: none;
 	background-color: #7db54f;
 }
 
-
 .product-card-stars {
 	width: 100%;
 	height: 17px;
@@ -1446,7 +1344,6 @@ border: none;
 .product-stars-1 {
 	width: 18px;
 }
-
 
 .product-card-rating {
 	background-color: #f2f2f2;
