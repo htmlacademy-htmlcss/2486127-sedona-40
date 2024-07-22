@@ -38,7 +38,7 @@ body {
 
 .page-container {
 	background-color: #ffffff;
-	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2); 
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 
@@ -52,7 +52,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-	
+
 
 .main-container {
 	flex-grow: 1;
@@ -209,6 +209,10 @@ body {
 .image-welcome,
 .advantage-img {
 	display: block;
+}
+
+.advantage-img {
+	object-fit: cover;
 }
 
 .text-about {
@@ -514,7 +518,7 @@ body {
 
 .social-link:active {
 	opacity: 30%;
-} 	 	
+}
 
 .footer-phone {
 	width: 330px;
@@ -572,7 +576,7 @@ body {
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
   /* background-color: #f2f2f2;
-  opacity: 80%; 
+  opacity: 80%;
   можно еще так записать перекрытие цвета на прозрачность*/
 }
 
@@ -604,6 +608,10 @@ body {
 	grid-template-columns: repeat(2, 139px 151px);
 	grid-template-rows: repeat(3, auto 48px) 60px;
 	align-items: center;
+}
+
+.modal-label-wrapper {
+  display: flex;
 }
 
 .modal-label {
@@ -742,10 +750,10 @@ border: none;
 
 
 .tooltip {
-    position: absolute;
     margin-left: 10px;
     width: 26px;
     height: 26px;
+    position: relative;
 }
 
 .modal-tooltip {
@@ -971,7 +979,7 @@ border: none;
   .control-label {
 	padding-left: 12px;
   }
-  
+
   .control-mark {
 	position: absolute;
 	top: 1px;
@@ -1023,7 +1031,7 @@ border: none;
 .control-input[type="checkbox"]:checked + .control-mark::before {
 	transform: rotate(45deg);
   }
-  
+
   .control-input[type="checkbox"]:checked + .control-mark::after {
 	transform: rotate(-45deg);
   } */
@@ -1031,7 +1039,7 @@ border: none;
 .control-input[type="radio"] + .control-mark {
 	border-radius: 50%;
   }
-  
+
 .control-input[type="radio"]:checked + .control-mark::after {
 	  position: absolute;
 	  top: 5px;
@@ -1264,7 +1272,7 @@ border: none;
 	width: 48px;
 	height: 48px;
 	align-items: center;
-	outline: none; /*убирает браузерное выделение табом*/ 
+	outline: none; /*убирает браузерное выделение табом*/
 }
 
 .view-button-current {
@@ -1334,7 +1342,7 @@ border: none;
 .product-card {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto;
+	grid-template-rows: auto 1fr;
 	gap: 16px 20px;
 	width: 340px;
 	min-height: 438px;
@@ -1342,7 +1350,6 @@ border: none;
 	border-radius: 4px;
 	border-color: #e6e6e6;
 	padding: 20px;
-
 }
 
 .product-card-link {
@@ -1386,10 +1393,10 @@ border: none;
 	text-align: center;
 	color: #ffffff;
 	text-decoration: none;
-	padding: 8px 0px;
+	padding: 8px 0;
 	border-radius: 4px;
-	background-color: #756157;
 	width: 140px;
+  align-self: center;
 }
 
 .add-favorites-button {
@@ -1401,10 +1408,10 @@ border: none;
 	text-align: center;
 	color: #ffffff;
 	text-decoration: none;
-	padding: 8px 0px;
+	padding: 8px 0;
 	border-radius: 4px;
-	background-color: #82b3d3;
 	width: 140px;
+  align-self: center;
 }
 
 .take-button {
@@ -1413,12 +1420,11 @@ border: none;
 
 
 .product-card-stars {
-	margin: 0;
 	width: 100%;
 	height: 17px;
 	background-image: url("../images/icon/icon-star.svg");
 	background-repeat: space;
-	margin: auto 0px;
+	margin: auto 0;
 }
 
 .product-stars-5 {
@@ -1451,9 +1457,8 @@ border: none;
 	text-align: center;
 	color: #333333;
 	margin: 0;
-	padding: 8px 0px;
+	padding: 8px 0;
 	border-radius: 4px;
-	background-color: #f2f2f2;
 	width: 140px;
 }
 
