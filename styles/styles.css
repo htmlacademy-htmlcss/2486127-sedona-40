@@ -346,16 +346,32 @@ body {
 	padding: 81px 85px;
 }
 
-.services-pic{
-	height: 76px;
-	object-fit: contain;
-	margin-bottom: 24px;
+.services-item:nth-child(1) {
+  background-image: url(../images/icon/icon-home.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 81px;
+}
+
+.services-item:nth-child(2) {
+  background-image: url(../images/icon/icon-food.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 81px;
+}
+
+.services-item:nth-child(3) {
+  background-image: url(../images/icon/icon-gift.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 81px;
 }
 
 .services-title {
 	margin: 0;
 	text-transform: uppercase;
 	margin-bottom: 35px;
+  padding-top: 105px;
 }
 
 .services-description {
@@ -464,7 +480,7 @@ body {
 }
 
 .main-footer {
-	padding: 25px 70px 30px;
+	padding: 25px 0 10px;
   display: flex;
 	width: 1060px;
   margin: 0 auto;
@@ -934,7 +950,7 @@ border: none;
 }
 
 .catalog-filter-item {
-  padding-bottom: 16px;
+  padding-bottom: 18px;
 }
 
 .catalog-filter-item:last-child {
@@ -967,7 +983,7 @@ border: none;
 	transform: translate(-50%, -50%);
 	width: 13px;
 	height: 10px;
-	background-image: url("../images/galka.svg");
+	background-image: url("../images/check-mark.svg");
 	background-position: center;
 	background-repeat: no-repeat;
   }
@@ -1009,6 +1025,8 @@ border: none;
     background-color: #f2f2f2;
     border: none;
     transition: background-color 0.4s ease;
+		appearance: none;
+		-moz-appearance: textfield;
 }
 
 .range-input:hover,
@@ -1018,7 +1036,8 @@ border: none;
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1177,7 +1196,8 @@ border: none;
   background-image: url("../images/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   padding-right: 48px;
 }
 
