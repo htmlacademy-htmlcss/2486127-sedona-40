@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon-sedona.ico" sizes="32x32">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+</head>
 
   <body>
     <div class="page-container">
@@ -112,17 +113,14 @@
       </div>
         <ul class="services-list">
           <li class="services-item grey-light">
-            <img class="services-pic" src="images/icon/icon-home.svg" width="75" height="72" alt="Жильё">
             <h3 class="services-title">Жильё</h3>
             <p class="services-description">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в кино!</p>
           </li>
           <li class="services-item">
-            <img class="services-pic" src="images/icon/icon-food.svg" width="74" height="70" alt="Еда">
             <h3 class="services-title">Еда</h3>
             <p class="services-description">Всегда заказывайте <br>топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="services-item grey-light">
-            <img class="services-pic" src="images/icon/icon-gift.svg" width="64" height="76" alt="Сувениры">
             <h3 class="services-title">Сувениры</h3>
             <p class="services-description">Не только китайского, <br>но и настоящего местного производства!</p>
           </li>
@@ -142,6 +140,7 @@
         <p class="text-about text-about-4">Подпишитесь на рассылку</p>
         <p class="text-reasons letter">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="newsletter-email">E-mail</label>
           <input class="mail-field" type="email" name="newsletter-email" id="newsletter-email" placeholder="Ваш e-mail"
             required>
           <button class="newsletter-button blue-button" type="submit">
@@ -188,6 +187,7 @@
         <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
       <a class="logo-link-academy" href="https://htmlacademy.ru/intensive/htmlcss">
+        <span class="visually-hidden">HTML Academy</span>
         <svg width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="black"/>
           <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z" fill="black"/>
@@ -269,7 +269,7 @@
         </form>
 
       </section>
-      <button class="modal-button-close">
+      <button class="modal-button-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </div>
